@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("./fonts/ClashDisplay-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("./fonts/ClashDisplay-Semibold.woff") format("woff");
+}
+
+select#reference {
+  appearance: none;
+  z-index: 1;
+}
