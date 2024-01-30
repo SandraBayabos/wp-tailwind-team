@@ -938,6 +938,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-darkBlue {
+  --tw-text-opacity: 1;
+  color: rgb(34 39 65 / var(--tw-text-opacity));
+}
 
 @font-face {
   font-family: "ClashDisplay-Regular";
