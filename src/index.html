@@ -16,10 +16,10 @@
     />
   </head>
   <body>
-    <header style="background: linear-gradient(93deg, white 0%, #c7f1e9 100%)">
-      <div class="container flex flex-col py-8" style="background: transparent">
+    <header class="flex flex-col md:flex-row md:justify-center md:items-center" style="background: linear-gradient(93deg, white 0%, #c7f1e9 100%)">
+      <div class="container pt-8 md:w-1/2" style="background: transparent">
         <h1
-          class="text-5xl font-clashDisplay font-light text-center"
+          class="text-5xl md:text-7xl font-clashDisplay font-light text-center"
           style="
             background: linear-gradient(93deg, #222741, #217f70 100%);
             -webkit-text-fill-color: transparent;
@@ -29,17 +29,24 @@
           Meet The <span class="font-clashDisplay font-medium">Team</span>
         </h1>
       </div>
-      <div class="relative">
+      <div class="relative md:w-1/2">
         <img
           src="./dist/images/chrome-vase.png"
           alt="platinum podium"
           style="mix-blend-mode: luminosity"
+          class="md:block md:ml-auto w-full h-full hidden"
+        />
+        <img
+          src="./dist/images/chrome-vase-mobile.png"
+          alt="platinum podium"
+          style="mix-blend-mode: luminosity"
+          class="block md:ml-auto w-full h-full md:hidden"
         />
       </div>
     </header>
 
     <section
-      class="container py-14"
+      class="py-14"
       style="
         background: linear-gradient(
           92deg,
@@ -51,7 +58,7 @@
     >
       <div style="background: transparent">
         <h2
-          class="text-5xl font-clashDisplay font-light text-center mb-8 leading-normal"
+          class="text-5xl md:text-7xl font-clashDisplay font-light text-center mb-8 leading-normal"
           style="
             background: linear-gradient(93deg, #222741, #217f70 100%);
             -webkit-text-fill-color: transparent;
@@ -60,82 +67,97 @@
         >
           Why <span class="font-clashDisplay font-medium">Platinum Podium</span>
         </h2>
-
-        <div class="relative mb-5">
-          <img
-            src="./dist/images/why-platinum-podium.png"
-            alt="platinum podium awards"
-            class="block mx-auto"
-          />
-          <img
-            src="./dist/images/silver-chrome.png"
-            alt="silver chrome award"
-            class="absolute -top-3.5 left-0"
-          />
-        </div>
-
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            We act as consultant by providing value-added and constant
-            recommendations to our customers.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            Execution experiences, with proven track record.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            Industry knowledge, broad network and connections.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            People’s commitment in delivering value.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            Monitoring and management of project budgets.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            High level of professionalism and integrity.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            Flexible, creative & resourceful in delivering projects with a
-            difference.
-          </p>
-        </div>
-        <div class="flex items-start gap-2 mb-8">
-          <img src="./dist/images/spark.png" alt="spark icon" />
-          <p class="flex-grow text-sm font-inter">
-            Highly committed & dedicated personnel who provide detailed
-            follow-up and follow through of projects.
-          </p>
+        <div class="container md:flex md:justify-center md:items-center text-sm md:gap-5">
+            <div class="relative mb-5 md:w-1/2">
+              <img
+                  src="./dist/images/why-platinum-podium.png"
+                  alt="platinum podium awards"
+                  class="mx-auto md:w-auto md:h-full hidden md:block"
+              />
+              <img
+                  src="./dist/images/why-platinum-podium-mobile.png"
+                  alt="platinum podium awards"
+                  class="mx-auto md:w-auto md:h-full md:hidden block"
+              />
+              <img
+                  src="./dist/images/silver-chrome.png"
+                  alt="silver chrome award"
+                  class="absolute -top-7 -left-7 hidden md:block"
+                  style="max-width: 93px; max-height: 93px;"
+              />
+              <img
+                  src="./dist/images/silver-chrome-mobile.png"
+                  alt="silver chrome award"
+                  class="absolute -top-3.5 -left-2.5 md:hidden block"
+                  style="max-width: 55px; max-height: 60px;"
+              />
+            </div>
+            <div class="md:w-1/2">
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  We act as consultant by providing value-added and constant
+                  recommendations to our customers.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  Execution experiences, with proven track record.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  Industry knowledge, broad network and connections.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  People’s commitment in delivering value.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  Monitoring and management of project budgets.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  High level of professionalism and integrity.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  Flexible, creative & resourceful in delivering projects with a
+                  difference.
+                </p>
+              </div>
+              <div class="flex items-start gap-2 mb-8">
+                <img src="./dist/images/spark.png" alt="spark icon" />
+                <p class="flex-grow text-sm font-inter">
+                  Highly committed & dedicated personnel who provide detailed
+                  follow-up and follow through of projects.
+                </p>
+              </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section
-      class="container py-14"
+      class="py-14"
       style="
         background: linear-gradient(92deg, #d7fff7 0%, white 50%, #d7fff7 100%);
       "
     >
+    <div class="container">
       <h2
-        class="text-5xl font-clashDisplay font-light text-center leading-normal"
+        class="text-5xl md:text-7xl font-clashDisplay font-light text-center leading-normal md:pb-14"
         style="
           background: linear-gradient(93deg, #222741, #217f70 100%);
           -webkit-text-fill-color: transparent;
@@ -144,17 +166,25 @@
       >
         Recognition <span class="font-clashDisplay font-medium">Award</span>
       </h2>
-      <img
-        src="./dist/images/sme-logo.svg"
-        alt="sme logo"
-        class="block mx-auto my-9"
-      />
-      <img src="./dist/images/sme-100-video.png" alt="sme 100 video snap" />
+      <div class="md:flex flex-row items-center justify-around">
+        <div class="md:w-2/5">
+          <img
+            src="./dist/images/sme-logo.png"
+            alt="sme logo"
+            class="block mx-auto my-9 w-1/2 md:h-1/5"
+            style="max-height: 300px; max-width: 300px;"
+          />
+        </div>
+        <div class="md:w-3/5">
+          <img src="./dist/images/sme-100-video.png" alt="sme 100 video snap" class="md:w-full" style="max-height: 300px; max-width: 533px;"/>
+        </div>
+      </div>
+    </div>
     </section>
 
     <section class="container py-14">
       <h2
-        class="text-5xl font-clashDisplay font-light text-center leading-normal"
+        class="text-5xl md:text-7xl font-clashDisplay font-light text-center leading-normal"
         style="
           background: linear-gradient(93deg, #222741, #217f70 100%);
           -webkit-text-fill-color: transparent;
@@ -164,47 +194,48 @@
         Our <span class="font-clashDisplay font-medium">Team</span>
       </h2>
       <div
-        class="flex justify-center items-center flex-col container text-sm text-justify font-inter font-normal mb-16"
+        class="flex justify-center items-center flex-col md:flex-row md:gap-6 container text-sm text-justify font-inter font-normal mb-16"
       >
         <img
           src="./dist/images/cheryl-lee.png"
           alt="cheryl lee managing director"
-          class="my-5"
+          class="my-5 w-1/2"
         />
-
-        <div
-          class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-4 py-2.5 text-darkGreen"
-        >
-          Cheryl Lee
+        <div class="w-1/2">
+          <div
+            class="border border-darkGreen text-sm md:text-base md:inline-block font-clashDisplay font-semibold rounded-full px-4 py-2.5 text-darkGreen"
+          >
+            Cheryl Lee
+          </div>
+          <div class="text-sm md:text-base font-inter text-center my-3.5 md:text-left">
+            Managing Director
+          </div>
+          <p class="md:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim
+            sodales ut eu sem integer vitae justo eget.
+          </p>
+          <br />
+          <p class="md:text-base">
+            Sit amet risus nullam eget felis eget. Sit amet volutpat consequat
+            mauris nunc congue nisi vitae suscipit. Vitae purus faucibus ornare
+            suspendisse sed nisi lacus sed. Sit amet venenatis urna cursus. Amet
+            luctus venenatis lectus magna fringilla urna.
+          </p>
+          <br />
+          <p class="md:text-base">
+            Elit pellentesque habitant morbi tristique. Est pellentesque elit
+            ullamcorper dignissim cras tincidunt lobortis. Morbi tistique senectus
+            et netus et malesuada. Auctor augue mauris augue neque. At tellus at
+            urna condimentum mattis. Diam quam.
+          </p>
+          <br />
+          <p class="self-start md:text-base">Thank you.</p>
         </div>
-        <div class="text-sm font-inter text-center my-3.5">
-          Managing Director
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim
-          sodales ut eu sem integer vitae justo eget.
-        </p>
-        <br />
-        <p>
-          Sit amet risus nullam eget felis eget. Sit amet volutpat consequat
-          mauris nunc congue nisi vitae suscipit. Vitae purus faucibus ornare
-          suspendisse sed nisi lacus sed. Sit amet venenatis urna cursus. Amet
-          luctus venenatis lectus magna fringilla urna.
-        </p>
-        <br />
-        <p>
-          Elit pellentesque habitant morbi tristique. Est pellentesque elit
-          ullamcorper dignissim cras tincidunt lobortis. Morbi tistique senectus
-          et netus et malesuada. Auctor augue mauris augue neque. At tellus at
-          urna condimentum mattis. Diam quam.
-        </p>
-        <br />
-        <p class="self-start">Thank you.</p>
       </div>
 
-      <div class="grid grid-cols-2 grid-rows-4 gap-2">
-        <div class="flex items-center flex-col"><img src="./dist/images/dicky-chua.png" alt="dicky chua" style="width: 156px; height: 199px;"/>
+      <div class="grid grid-cols-2 grid-rows-4 gap-2 md:grid-cols-4 md:grid-rows-2 md:gap-6">
+        <div class="flex items-center flex-col"><img src="./dist/images/dicky-chua.png" alt="dicky chua" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -212,8 +243,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Operation Manager
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/tj-tan.png" alt="tj tan" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/tj-tan.png" alt="tj tan" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -223,7 +255,7 @@
             Assistant Operation Manager
           </div>
         </div>
-        <div class="flex items-center flex-col"><img src="./dist/images/kevin-khoo.png" alt="kevin khoo" style="width: 156px; height: 199px;"/>
+        <div class="flex items-center flex-col"><img src="./dist/images/kevin-khoo.png" alt="kevin khoo" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -231,8 +263,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Innovation Development Manager
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/long-lai-wen-shan.png" alt="long lai wen shan" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/long-lai-wen-shan.png" alt="long lai wen shan" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -240,8 +273,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Senior Event Executive
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/donna-goon.png" alt="donna goon" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/donna-goon.png" alt="donna goon" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -249,8 +283,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Senior Event Executive
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/crystal-ng.png" alt="crystal ng" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/crystal-ng.png" alt="crystal ng" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -258,8 +293,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Event Executive
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/norliza.png" alt="norliza" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/norliza.png" alt="norliza" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -267,8 +303,9 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Senior Event Executive
-          </div></div>
-        <div class="flex items-center flex-col"><img src="./dist/images/isabelle-yee.png" alt="isabelle yee" style="width: 156px; height: 199px;"/>
+          </div>
+        </div>
+        <div class="flex items-center flex-col"><img src="./dist/images/isabelle-yee.png" alt="isabelle yee" class="w-[156px] h-[199px] md:h-[363px] md:w-[284px]"/>
             <div
             class="border border-darkGreen text-sm font-cladivlay font-semibold rounded-full px-3 py-2.5 text-darkGreen mt-3.5"
           >
@@ -276,7 +313,8 @@
           </div>
           <div class="text-sm font-inter text-center my-3.5">
             Finance Executive
-          </div></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -380,12 +418,12 @@
             <img
               src="./dist/images/platinumpodium.png"
               alt="platinum podium"
-              class="h-[81px] w-[103px] md:h-full md:w-full"
+              class="h-[81px] w-[103px] md:h-[115px] md:w-[147px]"
             />
             <img
               src="./dist/images/ppc-logo.png"
               alt="ppc logo"
-              class="h-[69px] w-[137px] md:h-full md:w-full"
+              class="h-[69px] w-[137px] md:h-[98px] md:w-[195px]"
             />
           </div>
           <img
@@ -456,7 +494,7 @@
             alt="sme logo"
             width="130"
             height="130"
-            class="object-none self-end hidden md:block"
+            class="self-end hidden md:block"
           />
         </div>
         <div class="flex flex-col md:flex-row justify-between mt-16 pt-2 pb-12">
