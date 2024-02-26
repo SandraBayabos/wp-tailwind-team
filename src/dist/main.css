@@ -1201,4 +1201,9 @@ select#reference {
     padding-left: 2.75rem;
     padding-right: 2.75rem;
   }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
